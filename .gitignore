@@ -1,0 +1,12 @@
+# OpenTofu / Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+*.tfplan
+crash.log
+crash.*.log
+
+# Secrets — never commit these
+*.tfvars
+!*.tfvars.example
