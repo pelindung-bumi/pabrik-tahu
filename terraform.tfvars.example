@@ -1,2 +1,4 @@
-github_owner = "pelindung-bumi"
-github_token = "ghp_your_token_here"
+github_owner              = "pelindung-bumi"
+github_app_id             = "123456"
+github_app_installation_id = "12345678"
+github_app_pem_file       = "path/to/your-app.private-key.pem"

@@ -10,3 +10,4 @@ crash.*.log
 # Secrets — never commit these
 *.tfvars
 !*.tfvars.example
+*.pem

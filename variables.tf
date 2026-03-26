@@ -4,8 +4,18 @@ variable "github_owner" {
   default     = "pelindung-bumi"
 }
 
-variable "github_token" {
-  description = "GitHub personal access token with org admin permissions"
+variable "github_app_id" {
+  description = "GitHub App ID"
+  type        = string
+}
+
+variable "github_app_installation_id" {
+  description = "GitHub App installation ID for the organization"
+  type        = string
+}
+
+variable "github_app_pem_file" {
+  description = "Path to the GitHub App private key PEM file"
   type        = string
   sensitive   = true
 }
