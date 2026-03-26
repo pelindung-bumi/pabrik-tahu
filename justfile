@@ -2,7 +2,7 @@ default:
     just --list
 
 init:
-    tofu init
+    tofu init -backend-config=backend.hcl
 
 plan:
     tofu plan

@@ -1,0 +1,10 @@
+# Copy this file to backend.hcl and fill in your Cloudflare R2 credentials.
+# backend.hcl is gitignored — never commit it.
+#
+# How to get these values:
+#   1. Go to Cloudflare Dashboard → R2 → Manage R2 API Tokens
+#   2. Create a token with Object Read & Write permissions on the bucket
+#   3. Copy the Access Key ID and Secret Access Key below
+
+access_key = "your-r2-access-key-id"
+secret_key = "your-r2-secret-access-key"
