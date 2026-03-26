@@ -11,3 +11,4 @@ crash.*.log
 *.tfvars
 !*.tfvars.example
 *.pem
+.devenv/
