@@ -1,14 +1,10 @@
-# Copy this file to backend.hcl and fill in your AWS credentials.
+# Copy this file to backend.hcl and fill in your Cloudflare R2 credentials.
 # backend.hcl is gitignored — never commit it.
 #
 # How to get these values:
-#   1. Go to AWS Console → IAM → Users → your user → Security credentials
-#   2. Create an Access Key with S3 + DynamoDB permissions
-#   3. Fill in the values below
-#
-# Required AWS resources (create once):
-#   - S3 bucket:      pabrik-tahu-state       (region: ap-southeast-1)
-#   - DynamoDB table: pabrik-tahu-state-lock   (partition key: LockID, type: String)
+#   1. Cloudflare Dashboard → R2 → Manage R2 API Tokens → Create API Token
+#   2. Permissions: Object Read & Write on bucket pabrik-tahu-state
+#   3. Copy Access Key ID and Secret Access Key below
 
-access_key = "your-aws-access-key-id"
-secret_key = "your-aws-secret-access-key"
+access_key = "your-r2-access-key-id"
+secret_key = "your-r2-secret-access-key"
