@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    github = {
+      source  = "integrations/github"
+      version = "~> 6.0"
+    }
+  }
+}
+
 resource "github_repository" "this" {
   name         = var.name
   description  = var.description
@@ -6,6 +15,7 @@ resource "github_repository" "this" {
   has_issues   = var.has_issues
   has_projects = var.has_projects
   has_wiki     = var.has_wiki
+  auto_init    = var.auto_init
 
   allow_squash_merge = true
 
@@ -14,11 +24,7 @@ resource "github_repository" "this" {
   squash_merge_commit_message = "COMMIT_MESSAGES"
   squash_merge_commit_title   = "COMMIT_OR_PR_TITLE"
 
-  dynamic "pages" {
-    for_each = var.pages_cname != null ? [1] : []
-    content {
-      build_type = var.pages_build_type
-      cname      = var.pages_cname
-    }
+  lifecycle {
+    ignore_changes = [pages]
   }
 }

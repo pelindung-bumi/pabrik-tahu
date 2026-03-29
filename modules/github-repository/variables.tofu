@@ -39,14 +39,9 @@ variable "has_wiki" {
   default     = true
 }
 
-variable "pages_build_type" {
-  description = "GitHub Pages build type"
-  type        = string
-  default     = "workflow"
+variable "auto_init" {
+  description = "Create repository with an initial README"
+  type        = bool
+  default     = false
 }
 
-variable "pages_cname" {
-  description = "GitHub Pages custom domain (CNAME). Set to enable Pages."
-  type        = string
-  default     = null
-}

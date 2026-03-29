@@ -2,7 +2,6 @@ module "pelindung_bumi_github_io" {
   source       = "./modules/github-repository"
   name         = "pelindung-bumi.github.io"
   homepage_url = "https://pelindungbumi.dev/"
-  pages_cname  = "pelindungbumi.dev"
 }
 
 module "semesta" {
@@ -22,7 +21,6 @@ module "peta" {
   name         = "peta"
   description  = "Peta is the documentation page, a map for all of Para Pelindung Bumi"
   homepage_url = "https://docs.pelindungbumi.dev/"
-  pages_cname  = "docs.pelindungbumi.dev"
 }
 
 module "samudera" {
@@ -35,4 +33,11 @@ module "pabrik_tahu" {
   source      = "./modules/github-repository"
   name        = "pabrik-tahu"
   description = "Pabrik Tahu is bahasa Indonesia of tofu factory. This repository is place for managing IaC with Opentofu/Terraform(mostly will be Opentofu)"
+}
+
+module "test_new_repo" {
+  source      = "./modules/github-repository"
+  name        = "test-new-repo"
+  description = "Test new repository"
+  auto_init   = true
 }

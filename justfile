@@ -2,13 +2,13 @@ default:
     just --list
 
 init:
-    tofu init -backend-config=backend.hcl
+    tofu init
 
 plan:
-    tofu plan
+    tofu plan -target=module.semesta -target=module.galaksi -target=module.samudera -target=module.pabrik_tahu
 
 apply:
-    tofu apply
+    tofu apply -target=module.semesta -target=module.galaksi -target=module.samudera -target=module.pabrik_tahu
 
 destroy:
     tofu destroy
@@ -18,6 +18,9 @@ fmt:
 
 validate:
     tofu validate
+
+refresh:
+    tofu refresh -target=module.semesta -target=module.galaksi -target=module.samudera -target=module.pabrik_tahu
 
 migrate-state:
     tofu state mv 'github_repository.pelindung_bumi_github_io' 'module.pelindung_bumi_github_io.github_repository.this'
