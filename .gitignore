@@ -10,5 +10,6 @@ crash.*.log
 # Secrets — never commit these
 *.tfvars
 !*.tfvars.example
+backend.hcl
 *.pem
 .devenv/
